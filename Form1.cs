@@ -18,9 +18,12 @@ namespace Pro01
         public StringBuilder sb = new StringBuilder();
         public string menu = "";
 
+       
+
         public Form1()
         {
             InitializeComponent();
+            panel2.Visible = false;
         }
 
         private void tabControl1_Click(object sender, EventArgs e)
@@ -31,6 +34,8 @@ namespace Pro01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
+
             count++;
             cost += 5000;
             list.Add("불고기버거");
@@ -92,7 +97,7 @@ namespace Pro01
 
         private void bt_suc_Click(object sender, EventArgs e)
         {
-
+            panel2.Visible = true;
         }
 
         private void bt_Clear_Click(object sender, EventArgs e)
@@ -147,6 +152,16 @@ namespace Pro01
             Text_cart.Text += "치즈스틱 \n";
             text_money.Text = cost.ToString();
             label11.Text = count.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void btn_NextPay_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
